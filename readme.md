@@ -34,7 +34,7 @@ A Chrome extension that visualizes your remaining time in a GitHub-style graph. 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/life-countdown.git
+git clone https://github.com/CharithCD/life-countdown.git
 cd life-countdown
 ```
 
