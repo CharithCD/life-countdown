@@ -250,5 +250,41 @@ function clearIntervals() {
   if (countdownInterval) clearInterval(countdownInterval);
 }
 
-// Load settings on page load to ensure the latest settings are applied
-document.addEventListener("DOMContentLoaded", loadSettings);
+// --- Your existing code above ---
+
+// Function to set a random motivational message
+function setRandomMotivation() {
+  const motivationalMessages = [
+    "Every second counts - start living now!",
+    "Time is precious, use it wisely.",
+    "Don't count the days; make the days count!",
+    "Your future is created by what you do today.",
+    "Embrace every moment. Create your legacy!",
+    "Every second counts - make them meaningful.",
+    "Your time is limited. Use it wisely.",
+    "The clock is ticking. What will you do today?",
+    "Don't wait for the perfect moment - create it.",
+    "Make every heartbeat count.",
+    "A year from now, you'll wish you started today.",
+    "You can't stop time, but you can make it count.",
+    "Minutes turn into memories. Make them great.",
+    "What you do today shapes your tomorrow.",
+    "Live intentionally. Time won't wait.",
+  ];
+
+  const messageElement =
+    document.getElementById("motivationMessage") ||
+    document.querySelector(".message");
+  if (messageElement) {
+    const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
+    messageElement.textContent = motivationalMessages[randomIndex];
+  }
+}
+
+// Existing DOMContentLoaded listener combined with our random message logic
+document.addEventListener("DOMContentLoaded", () => {
+  setRandomMotivation();
+  loadSettings();
+});
+
+// --- The rest of your code below ---
