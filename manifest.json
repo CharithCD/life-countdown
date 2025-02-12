@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Life Countdown",
+  "version": "1.0",
+  "description": "Visualize your remaining time in a GitHub-style graph. Stay motivated and make every moment count!",
+  "permissions": ["storage"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Life Countdown",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "offline_enabled": true,
+  "short_name": "Countdown",
+  "author": "Damruwan",
+  "homepage_url": "https://damruwan.com"
+}

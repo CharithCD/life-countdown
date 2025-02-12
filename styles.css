@@ -1,0 +1,267 @@
+/* Body Styling */
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Settings Icon Styling */
+.settings {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.settings:hover {
+  transform: rotate(90deg);
+}
+
+/* Centered Content for Countdown and Text */
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 800px;
+}
+
+.message {
+  font-size: 40px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.countdown-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ff6b6b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
+}
+
+.time-unit span {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Space Mono", monospace;
+}
+
+.time-unit p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Grid Layout for Squares */
+.grid {
+  display: grid;
+  gap: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.square {
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.square:hover {
+  background-color: #2e7d32;
+}
+
+/* Modal (Settings Popup) Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.modal-content label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
+
+.modal-content input,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input {
+  background: #1e1e1e;
+  width: calc(100% - 20px);
+}
+
+.modal-content input:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+
+.modal-content button {
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #ff5252;
+}
+
+/* Tabbed Interface for Settings */
+.tab {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.tab button.active {
+  background-color: #ff6b6b;
+  font-weight: bold;
+}
+
+.tabcontent {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .message {
+    font-size: 20px;
+  }
+
+  .countdown-title {
+    font-size: 24px;
+  }
+
+  .time-unit span {
+    font-size: 28px;
+  }
+
+  .time-unit p {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    gap: 10px;
+  }
+
+  .time-unit {
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .time-unit span {
+    font-size: 24px;
+  }
+
+  .time-unit p {
+    font-size: 10px;
+  }
+}
