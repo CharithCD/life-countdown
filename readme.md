@@ -25,6 +25,8 @@ A Chrome extension that visualizes your remaining time in a GitHub-style graph. 
 
 ![Settings Modal](settings.png)
 
+### Event Countdown
+![Event Modal](event.png)
 ---
 
 ## Installation
